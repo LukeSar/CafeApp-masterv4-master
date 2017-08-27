@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:text="Done "
+        android:layout_width="1000dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/DoneButton"
+        android:textColor="@android:color/black"
+        android:background="@android:color/transparent"
+        android:textSize="20sp"
+        android:layout_marginBottom="33dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:id="@+id/editText3"
+        android:hint="E-mail Address"
+        android:layout_below="@+id/editText2"
+        android:layout_alignLeft="@+id/editText2"
+        android:layout_alignStart="@+id/editText2"
+        android:layout_marginTop="11dp" />
+
+    <Button
+        android:text="Click here for further information about the App!"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/FurtherButton"
+        android:background="@android:color/transparent"
+        android:textSize="20sp"
+        android:textAllCaps="false"
+        android:textColor="@android:color/background_dark"
+        android:layout_below="@+id/Signup_view"
+        android:layout_marginTop="22dp" />
+
+    <TextView
+        android:text="Sign Up"
+        android:layout_height="wrap_content"
+        android:id="@+id/Signup_view"
+        android:textSize="25sp"
+        android:textColor="@android:color/background_dark"
+        android:layout_width="match_parent"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/editText2"
+        android:hint="Surname"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/editText"
+        android:layout_alignStart="@+id/editText" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/editText4"
+        android:hint="Phone Number (Mobile)"
+        android:layout_marginTop="16dp"
+        android:layout_below="@+id/editText3"
+        android:layout_alignLeft="@+id/editText3"
+        android:layout_alignStart="@+id/editText3" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/editText"
+        android:hint="First Name"
+        android:layout_marginBottom="13dp"
+        android:layout_above="@+id/editText2"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

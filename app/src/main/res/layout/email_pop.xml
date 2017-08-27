@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:background="@drawable/boxshape"
+    android:layout_gravity="center_horizontal">
+
+
+    <TextView
+        android:text="  1.Why do we need your Email? \n  1.1We need your Email so that we can \n  have a form of contacting you with \n  information relevant to your order and \n  we will only use your Email to improve \n  your experience with us. "
+        android:layout_marginTop="39dp"
+        android:id="@+id/textView8"
+        android:layout_width="250dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_height="130dp" />
+</RelativeLayout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="?attr/actionModeCloseDrawable"
+        android:layout_marginLeft="11dp"
+        android:layout_marginStart="11dp"
+        android:id="@+id/BackButton"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="Lunch Menu (11:00 AM - 5:00 PM)"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/LunchButton"
+        android:layout_below="@+id/BreakfastButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="27dp" />
+
+    <Button
+        android:text="Breakfast Menu (8:00 - 11:00 AM)"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/BreakfastButton"
+        android:layout_marginTop="33dp"
+        android:layout_below="@+id/BackButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        app:srcCompat="@mipmap/cart"
+        android:layout_marginTop="46dp"
+        android:id="@+id/imageView"
+        android:layout_below="@+id/LunchButton"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="Checkout"
+        android:id="@+id/button"
+        android:layout_width="80sp"
+        android:layout_height="50sp"
+        android:background="@android:color/transparent"
+        android:layout_below="@+id/imageView"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>
