@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {   //initialises main scree
             @Override
             public void onClick(View view) {    //sets method so when the view or login button has been clicked a new action can be performed
 
-                if (EmailText.getText().toString().contains("") &&  //sets if condition so that the email field contains any object such as a character it can be accepted
+                if (EmailText.getText().toString().contains("@") &&  //sets if condition so that the email field contains any object such as a character it can be accepted
                         EmailText.getText().toString().contains(".co.uk")  ||   //sets another condition so that if email field has .co.uk it can be accepted
                         EmailText.getText().toString().contains(".com") &&  //sets another condition so that if email field contains .com it can be accepted
                                 UserNameText.getText().toString().equals("admin")){ //sets an 'and' condition so that the password admin must be entered to be allowed to login

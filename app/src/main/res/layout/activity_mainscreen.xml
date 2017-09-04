@@ -5,33 +5,32 @@
     android:layout_height="match_parent">
 
     <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="?attr/actionModeCloseDrawable"
-        android:layout_marginLeft="11dp"
-        android:layout_marginStart="11dp"
         android:id="@+id/BackButton"
-        android:layout_marginTop="20dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <Button
-        android:text="Lunch Menu (11:00 AM - 5:00 PM)"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/LunchButton"
-        android:layout_below="@+id/BreakfastButton"
+        android:layout_width="90dp"
+        android:layout_height="80dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="27dp" />
+        android:layout_alignParentTop="true"
+        app:srcCompat="?attr/actionModeCloseDrawable" />
 
     <Button
-        android:text="Breakfast Menu (8:00 - 11:00 AM)"
+        android:id="@+id/LunchButton"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="70dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/BreakfastButton"
+        android:layout_marginTop="23dp"
+        android:text="Lunch Menu (11:00 AM - 5:00 PM)"
+        android:textSize="18sp" />
+
+    <Button
         android:id="@+id/BreakfastButton"
-        android:layout_marginTop="33dp"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="20dp"
+        android:text="Breakfast Menu (8:00 - 11:00 AM)"
+        android:textSize="18sp"
         android:layout_below="@+id/BackButton"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
@@ -40,18 +39,30 @@
         android:layout_width="160dp"
         android:layout_height="160dp"
         app:srcCompat="@mipmap/cart"
-        android:layout_marginTop="46dp"
+        android:layout_marginTop="26dp"
         android:id="@+id/imageView"
         android:layout_below="@+id/LunchButton"
         android:layout_centerHorizontal="true" />
 
     <Button
-        android:text="Checkout"
-        android:id="@+id/button"
-        android:layout_width="80sp"
+        android:id="@+id/CheckoutButton"
+        android:layout_width="120sp"
         android:layout_height="50sp"
-        android:background="@android:color/transparent"
         android:layout_below="@+id/imageView"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/transparent"
+        android:text="Checkout"
+        android:textSize="18sp" />
+
+    <ImageButton
+        android:id="@+id/imageButton8"
+        android:layout_width="50dp "
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/BackButton"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        app:srcCompat="@mipmap/settingicon" />
 
 </RelativeLayout>

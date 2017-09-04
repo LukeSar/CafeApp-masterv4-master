@@ -19,6 +19,8 @@
         <activity android:name=".SignUpActivity"></activity>
         <activity android:name=".BreakfastMenu"></activity>
         <activity android:name=".LunchMenu"></activity>
+        <activity android:name=".Checkout"></activity>
+
     </application>
 
 </manifest>
