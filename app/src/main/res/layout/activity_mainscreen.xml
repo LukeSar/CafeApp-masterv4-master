@@ -11,6 +11,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
+        android:background="@android:color/transparent"
         app:srcCompat="?attr/actionModeCloseDrawable" />
 
     <Button
@@ -55,14 +56,16 @@
         android:textSize="18sp" />
 
     <ImageButton
-        android:id="@+id/imageButton8"
-        android:layout_width="50dp "
-        android:layout_height="50dp"
-        android:layout_alignParentEnd="true"
+        android:id="@+id/imageButton7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        app:srcCompat="@mipmap/settingsicon"
+        android:layout_marginRight="14dp"
+        android:layout_marginEnd="14dp"
+        android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
-        android:layout_alignTop="@+id/BackButton"
-        android:layout_marginEnd="20dp"
-        android:layout_marginRight="20dp"
-        app:srcCompat="@mipmap/settingicon" />
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="14dp" />
 
 </RelativeLayout>
