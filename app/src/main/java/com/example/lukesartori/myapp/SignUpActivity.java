@@ -18,8 +18,8 @@ import android.widget.Toast;
 public class SignUpActivity extends AppCompatActivity { //initialises sign up screen also uses app compat activity as a sub class from fragment activity with many useful API'S for supporting UI development
 
     EditText FirstNameText, SurnameText, PasswordText, PasswordTextConfirm, UsernameText, EmailText, PhoneText; //EditTexts to allow the user to enter information into the signup form
-    ImageButton BackButton; //ImageButton to allow the user to go back a page to first screen shown
-    Button DoneButton, FurtherButton; //initialises button to complete sign up form and show the further information popup
+    ImageButton BackButton, FurtherInfoButton; //ImageButton to allow the user to go back a page to first screen shown
+    Button DoneButton; //initialises button to complete sign up form and show the further information popup
     private PopupWindow popupWindow;    //sets private class for pop up window to contain the extra information
     private LayoutInflater layoutInflater;  //sets private class for a box to contain the pop up window with the information
 
@@ -33,12 +33,13 @@ public class SignUpActivity extends AppCompatActivity { //initialises sign up sc
         FirstNameText = (EditText) findViewById(R.id.FirstNameText);    //tool used for the UI to locate the 'First Name' TextView on the screen
         EmailText = (EditText) findViewById(R.id.EmailText);    //tool used for the UI to locate the 'Email' Text View on the screen
         DoneButton = (Button) findViewById(R.id.DoneButton);    //tool used for the UI to locate the 'done' button on the screen
-        FurtherButton = (Button) findViewById(R.id.FurtherButton);  //tool used for the UI to locate the 'further info' button on the screen
+        //tool used for the UI to locate the 'further info' button on the screen
         UsernameText = (EditText) findViewById(R.id.UserNameText);  //tool used for the UI to locate the 'Username' Text View on the screen
         PasswordTextConfirm = (EditText) findViewById(R.id.PasswordTextConfirm);    //tool used for the UI to locate the 'Password Confirmation' Text View on the screen
         BackButton = (ImageButton) findViewById(R.id.BackButton);   //tool used for the UI to locate the 'Back' button on the screen
         SurnameText = (EditText) findViewById(R.id.SurnameText);    //tool used for the UI to locate the 'Surname' Text View on the screen
         PhoneText = (EditText) findViewById(R.id.PhoneText);    //tool used for the UI to locate the 'Phone Number' TextView on the screen
+        FurtherInfoButton = (ImageButton) findViewById(R.id.FurtherInfoButton);
 
         DoneButton.setOnClickListener(new View.OnClickListener() {  //sets a class for the done button so that when it is clicked an action can be performed
             @Override
@@ -57,7 +58,7 @@ public class SignUpActivity extends AppCompatActivity { //initialises sign up sc
             public void onClick(View v) {
                 if (FirstNameText.getText().toString().trim().length() == 0) {
                     Toast.makeText(getApplicationContext(), //toast tool used to make a temporary message for the user
-                            "Incorrect", Toast.LENGTH_SHORT).show();
+                            "Please enter your first name", Toast.LENGTH_SHORT).show();
 
 
                 } else {
@@ -73,9 +74,9 @@ public class SignUpActivity extends AppCompatActivity { //initialises sign up sc
             public void onClick(View v) {
                 if (SurnameText.getText().toString().trim().length() == 0) {
                     Toast.makeText(getApplicationContext(), //toast tool used to make a temporary message for the user
-                            "Incorrect", Toast.LENGTH_SHORT).show();
+                            "Please enter your surname", Toast.LENGTH_SHORT).show();
 
-                }else {
+                } else {
                     Toast.makeText(getApplicationContext(),
                             "Accepted", Toast.LENGTH_SHORT).show();
                 }
@@ -86,24 +87,32 @@ public class SignUpActivity extends AppCompatActivity { //initialises sign up sc
         EmailText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (EmailText.getText().toString().trim().length() == 0) {
+                if (EmailText.getText().toString().trim().length() == 0)
                     Toast.makeText(getApplicationContext(), //toast tool used to make a temporary message for the user
                             "Incorrect", Toast.LENGTH_SHORT).show();
 
-                }else {
-                    Toast.makeText(getApplicationContext(),
-                            "Accepted", Toast.LENGTH_SHORT).show();
-                }
 
-        }
-    });
+                if (!EmailText.getText().toString().contains("@"))
+                    Toast.makeText(getApplicationContext(), //toast tool used to make a temporary message for the user
+                            "Incorrect", Toast.LENGTH_SHORT).show();
+
+
+                //  if (!EmailText.getText().toString().contains(".com") || !EmailText.getText().toString().contains(".co.uk")) {
+                //    Toast.makeText(getApplicationContext(), //toast tool used to make a temporary message for the user
+                //          "Incorrect", Toast.LENGTH_SHORT).show();
+
+
+            }
+
+        });
+
 
         PhoneText.setOnClickListener(new View.OnClickListener() {
                                          @Override
                                          public void onClick(View v) {
                                              if (PhoneText.getText().toString().trim().length() <10  || PhoneText.getText().toString().trim().length() >11) {
                                                  Toast.makeText(getApplicationContext(), //toast tool used to make a temporary message for the user
-                                                         "Incorrect", Toast.LENGTH_SHORT).show();
+                                                         "Please enter your mobile number", Toast.LENGTH_SHORT).show();
 
                                              } else {
                                                  Toast.makeText(getApplicationContext(),
@@ -111,32 +120,20 @@ public class SignUpActivity extends AppCompatActivity { //initialises sign up sc
                                              }
                                          }
                                      });
-/*
-        UsernameText.setOnClickListener(new View.OnClickListener() {
-                                            @Override
-                                            public void onClick(View v) {
-                                                if (UsernameText.getText().toString().trim().length() == 0) {
-                                                    Toast.makeText(getApplicationContext(), //toast tool used to make a temporary message for the user
-                                                            "Incorrect", Toast.LENGTH_SHORT).show();
 
-                                                } else {
-                                                    Toast.makeText(getApplicationContext(),
-                                                            "Accepted", Toast.LENGTH_SHORT).show();
-                                                }
-                                            }
-                                        });
 
-*/
+
+
        PasswordText.setOnClickListener(new View.OnClickListener() {
                                            @Override
                                            public void onClick(View v) {
                                                if (PasswordText.getText().toString().trim().length() < 6)
                                                    Toast.makeText(getApplicationContext(), //toast tool used to make a temporary message for the user
-                                                           "Incorrect", Toast.LENGTH_SHORT).show();
+                                                           "Please set a valid Password", Toast.LENGTH_SHORT).show();
 
                                                     if (!PasswordText.getText().toString().matches(".*\\d.*")){
                                                         Toast.makeText(getApplicationContext(), //toast tool used to make a temporary message for the user
-                                                                "Incorrect", Toast.LENGTH_SHORT).show();
+                                                                "Please set a valid Password", Toast.LENGTH_SHORT).show();
 
 
 
@@ -154,7 +151,7 @@ public class SignUpActivity extends AppCompatActivity { //initialises sign up sc
                                                   public void onClick(View v) {
                                                       if (PasswordTextConfirm.getText().toString().trim().length() < 6)
                                                           Toast.makeText(getApplicationContext(), //toast tool used to make a temporary message for the user
-                                                                  "Incorrect", Toast.LENGTH_SHORT).show();
+                                                                  "Please enter the same Password", Toast.LENGTH_SHORT).show();
                                                           if (!PasswordText.getText().toString().equals(PasswordTextConfirm.getText().toString())) {
                                                           Toast.makeText(getApplicationContext(), //toast tool used to make a temporary message for the user
                                                                   "Incorrect", Toast.LENGTH_SHORT).show();
@@ -168,9 +165,6 @@ public class SignUpActivity extends AppCompatActivity { //initialises sign up sc
                                               });
 
 
-
-
-
         BackButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -179,14 +173,14 @@ public class SignUpActivity extends AppCompatActivity { //initialises sign up sc
         });
 
 
-        FurtherButton.setOnClickListener(new View.OnClickListener(){    //sets a class for the further information button so that when it is clicked an action can be performed
+        FurtherInfoButton.setOnClickListener(new View.OnClickListener(){    //sets a class for the further information button so that when it is clicked an action can be performed
            @Override
             public void onClick(View v) {   //sets a method so when the further info button is clicked a new action can be performed
                layoutInflater = (LayoutInflater) getApplicationContext().getSystemService(LAYOUT_INFLATER_SERVICE); //retrieves the information to be held in the pop up from XML
                ViewGroup container = (ViewGroup) layoutInflater.inflate(R.layout.email_pop, null);  //calls the now retrieved XMl code and puts it into the 'email pop'
 
-               popupWindow = new PopupWindow(container, 950, 1120, true);   //initiates the pop up size and sets it to visible
-               popupWindow.showAtLocation(FurtherButton, Gravity.CENTER, 0, 0); //sets location of the pop up on the screen to center
+               popupWindow = new PopupWindow(container, 950, 1220, true);   //initiates the pop up size and sets it to visible
+               popupWindow.showAtLocation(FurtherInfoButton, Gravity.CENTER, 0, 0); //sets location of the pop up on the screen to center
 
                container.setOnTouchListener(new View.OnTouchListener() {    //adds a listener to the container of the pop up window so that the listener can react to an event such as being clicked
                    @Override

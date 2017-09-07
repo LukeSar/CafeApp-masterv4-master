@@ -10,10 +10,17 @@
     <TextView
         android:id="@+id/InfoPopUp"
         android:layout_width="250dp"
-        android:layout_height="130dp"
+        android:layout_height="500dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginTop="39dp"
-        android:text="  1.Why do we need your Email? \n  1.1We need your Email so that we can \n  have a form of contacting you with \n  information relevant to your order and \n  we will only use your Email to improve \n  your experience with us. " />
+        android:text="  1.Why do we need your Email? \n  1.1We need your Email so that we can \n  have a form of contacting you with
+                        \n  information relevant to your order and \n  we will only use your Email to improve \n  your experience with us.
+                        \n  2.How do you Pay? \n  2.1Payment is completed in store and \n  can be done via card or cash
+                        \n  3.Is the Food Fresh? \n  3.1All food is freshly made in the \n  downstairs kitchen and any Food \n  allergies should be checked through \n  the app or  with the staff in store
+                        \n  4.Where is the Cafe? \n  4.127 Chiltern St, Marylebone, London \n  W1U 7PJ
+                        \n  5.How do I order? \n  5.1First complete the sign up form  \n  then proceed to login and choose \n  what menu you wish to use according
+                        \n  to the time and then tap the items you \n  want and complete your order at the  \n  checkout screen"
+        android:textColor="@android:color/black" />
 </RelativeLayout>

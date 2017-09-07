@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -17,23 +18,26 @@
     <Button
         android:id="@+id/LunchButton"
         android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:layout_height="60dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/BreakfastButton"
         android:layout_marginTop="23dp"
+        android:textAllCaps="false"
         android:text="Lunch Menu (11:00 AM - 5:00 PM)"
-        android:textSize="18sp" />
+        android:textSize="14sp" />
 
     <Button
         android:id="@+id/BreakfastButton"
         android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:layout_height="60dp"
         android:layout_marginTop="20dp"
         android:text="Breakfast Menu (8:00 - 11:00 AM)"
-        android:textSize="18sp"
+        android:textIsSelectable="false"
+        android:textSize="14sp"
         android:layout_below="@+id/BackButton"
         android:layout_alignParentLeft="true"
+        android:textAllCaps="false"
         android:layout_alignParentStart="true" />
 
     <ImageView

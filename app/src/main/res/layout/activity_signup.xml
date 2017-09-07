@@ -29,29 +29,17 @@
         android:layout_alignStart="@+id/SurnameText"
         android:layout_marginTop="10dp" />
 
-    <Button
-        android:id="@+id/FurtherButton"
-        android:layout_width="400dp"
-        android:layout_height="50dp"
-        android:background="@android:color/transparent"
-        android:text="Click here for further information about the App!"
-        android:textAllCaps="false"
-        android:textColor="@android:color/background_dark"
-        android:textSize="14sp"
-        android:layout_below="@+id/BackButton"
-        android:layout_centerHorizontal="true" />
-
     <TextView
         android:id="@+id/Signup_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="15dp"
         android:gravity="center"
         android:text="Sign Up"
+        android:textAlignment="center"
         android:textColor="@android:color/background_dark"
-        android:textSize="25sp" />
+        android:textSize="25sp"
+        android:layout_alignBottom="@+id/BackButton"
+        android:layout_centerHorizontal="true" />
 
     <EditText
         android:id="@+id/SurnameText"
@@ -81,11 +69,11 @@
         android:id="@+id/FirstNameText"
         android:layout_width="250dp"
         android:layout_height="40dp"
-        android:layout_marginTop="10dp"
         android:ems="10"
         android:hint="First Name"
         android:inputType="textPersonName"
-        android:layout_below="@+id/FurtherButton"
+        android:layout_marginTop="36dp"
+        android:layout_below="@+id/Signup_view"
         android:layout_centerHorizontal="true" />
 
     <EditText
@@ -116,10 +104,11 @@
         android:id="@+id/BackButton"
         android:layout_width="70dp"
         android:layout_height="50dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
+        android:background="@android:color/transparent"
+        app:srcCompat="?android:attr/actionModeCloseDrawable"
         android:layout_alignParentTop="true"
-        app:srcCompat="?android:attr/actionModeCloseDrawable" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <EditText
         android:id="@+id/PasswordTextConfirm"
@@ -132,5 +121,15 @@
         android:layout_alignLeft="@+id/PasswordText"
         android:layout_alignStart="@+id/PasswordText"
         android:layout_marginTop="12dp" />
+
+    <ImageButton
+        android:id="@+id/FurtherInfoButton"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@android:color/transparent"
+        app:srcCompat="@android:drawable/ic_menu_info_details"
+        android:layout_alignBottom="@+id/BackButton"
+        android:layout_toRightOf="@+id/FirstNameText"
+        android:layout_toEndOf="@+id/FirstNameText" />
 
 </RelativeLayout>
